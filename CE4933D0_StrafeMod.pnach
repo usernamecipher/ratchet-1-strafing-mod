@@ -1,0 +1,463 @@
+[Strafing Mod for Ratchet & Clank]
+author=usernamecipher
+description=Hold L3 to strafe!
+
+
+//if planet == veldin
+patch=1,EE,D01E8A80,extended,4A016373
+patch=1,EE,D01E8A82,extended,49016E65
+
+
+//check if l3 is held down, i found this random mem value that actually stores l3 data
+patch=1,EE,D013CAFD,extended,01010002
+
+//store nop to angle instruct
+patch=1,EE,2020889C,extended,00000000
+
+//if not (its 00 when L3 is not held down)
+patch=1,EE,D013CAFD,extended,01010000
+
+//restore angle instruc
+patch=1,EE,2020889C,extended,24630040
+
+
+
+
+//if msg loeaded
+patch=1,EE,D1770DA8,extended,43006557
+
+//helpdesk messgae 1
+patch=1,EE,21770DA8,extended,636C6557
+patch=1,EE,21770DAC,extended,20656D6F
+patch=1,EE,21770DB0,extended,74206F74
+patch=1,EE,21770DB4,extended,47206568
+patch=1,EE,21770DB8,extended,65676461
+patch=1,EE,21770DBC,extended,6E6F7274
+patch=1,EE,21770DC0,extended,65480C20
+patch=1,EE,21770DC4,extended,6544706C
+patch=1,EE,21770DC8,extended,21086B73
+patch=1,EE,21770DCC,extended,65572020
+patch=1,EE,21770DD0,extended,666E6920
+patch=1,EE,21770DD4,extended,206D726F
+patch=1,EE,21770DD8,extended,20756F79
+patch=1,EE,21770DDC,extended,74616874
+patch=1,EE,21770DE0,extended,756F7920
+patch=1,EE,21770DE4,extended,65726120
+patch=1,EE,21770DE8,extended,75716520
+patch=1,EE,21770DEC,extended,65707069
+patch=1,EE,21770DF0,extended,69772064
+patch=1,EE,21770DF4,extended,74206874
+patch=1,EE,21770DF8,extended,6C206568
+patch=1,EE,21770DFC,extended,73657461
+patch=1,EE,21770E00,extended,470C2074
+patch=1,EE,21770E04,extended,65676461
+patch=1,EE,21770E08,extended,6E6F7274
+patch=1,EE,21770E0C,extended,72745320
+patch=1,EE,21770E10,extended,72656661
+patch=1,EE,21770E14,extended,48202108
+patch=1,EE,21770E18,extended,20646C6F
+patch=1,EE,21770E1C,extended,7420334C
+patch=1,EE,21770E20,extended,7473206F
+patch=1,EE,21770E24,extended,65666172
+patch=1,EE,21770E28,extended,6F726620
+patch=1,EE,21770E2C,extended,6973206D
+patch=1,EE,21770E30,extended,74206564
+patch=1,EE,21770E34,extended,6973206F
+patch=1,EE,21770E38,extended,00216564
+patch=1,EE,21770E3C,extended,00000000
+
+
+//helpdesk message 2
+patch=1,EE,21770C1C,extended,6F666E55
+patch=1,EE,21770C20,extended,6E757472
+patch=1,EE,21770C24,extended,6C657461 
+patch=1,EE,21770C28,extended,79202C79  
+patch=1,EE,21770C2C,extended,2072756F 
+patch=1,EE,21770C30,extended,6D6F420C 
+patch=1,EE,21770C34,extended,6C472062 
+patch=1,EE,21770C38,extended,0865766F 
+patch=1,EE,21770C3C,extended,20736920 
+patch=1,EE,21770C40,extended,20746F6E 	
+patch=1,EE,21770C44,extended,70707573 
+patch=1,EE,21770C48,extended,6574726F 
+patch=1,EE,21770C4C,extended,79622064 
+patch=1,EE,21770C50,extended,65687420 
+patch=1,EE,21770C54,extended,61470C20 
+patch=1,EE,21770C58,extended,74656764 
+patch=1,EE,21770C5C,extended,206E6F72 
+patch=1,EE,21770C60,extended,61727453 
+patch=1,EE,21770C64,extended,08726566 
+patch=1,EE,21770C68,extended,6557202E 
+patch=1,EE,21770C6C,extended,6F706120 
+patch=1,EE,21770C70,extended,69676F6C 
+patch=1,EE,21770C74,extended,6620657A 
+patch=1,EE,21770C78,extended,7420726F 
+patch=1,EE,21770C7C,extended,69206568 
+patch=1,EE,21770C80,extended,6E6F636E 
+patch=1,EE,21770C84,extended,696E6576
+patch=1,EE,21770C88,extended,65636E65
+patch=1,EE,21770C8C,extended,2E000000
+
+
+
+
+
+
+//if planet == novalis
+patch=1,EE,D0209AE0,extended,05016373
+patch=1,EE,D0209AE2,extended,04016E65
+
+//check if l3 is held down
+patch=1,EE,D013CAFD,extended,01010002
+
+//store nop to angle instruct
+patch=1,EE,20229F9C,extended,00000000
+
+//if not
+patch=1,EE,D013CAFD,extended,01010000
+
+//restore angle instruc
+patch=1,EE,20229F9C,extended,24630040
+
+
+
+//if planet == kerwan/metropolis
+patch=1,EE,D01E1700,extended,05016373
+patch=1,EE,D01E1702,extended,04016E65
+
+//check if l3 is held down
+patch=1,EE,D013CAFD,extended,01010002
+
+//store nop to angle instruct
+patch=1,EE,20201A2C,extended,00000000
+
+//if not
+patch=1,EE,D013CAFD,extended,01010000
+
+//restore angle instruc
+patch=1,EE,20201A2C,extended,24630040
+
+
+
+
+//if planet == aridia
+patch=1,EE,D01F9380,extended,05016373
+patch=1,EE,D01F9382,extended,04016E65
+
+//check if l3 is held down
+patch=1,EE,D013CAFD,extended,01010002
+
+//store nop to angle instruct
+patch=1,EE,202190F4,extended,00000000
+
+//if not
+patch=1,EE,D013CAFD,extended,01010000
+
+//restore angle instruc
+patch=1,EE,202190F4,extended,24630040
+
+
+
+
+
+//if planet == eudora
+patch=1,EE,D01DA820,extended,05016373
+patch=1,EE,D01DA822,extended,04016E65
+
+//check if l3 is held down
+patch=1,EE,D013CAFD,extended,01010002
+
+//store nop to angle instruct
+patch=1,EE,201FBE7C,extended,00000000
+
+//if not
+patch=1,EE,D013CAFD,extended,01010000
+
+//restore angle instruc
+patch=1,EE,201FBE7C,extended,24630040
+
+
+
+
+
+
+
+//if planet == Nebula G34
+patch=1,EE,D01FFE80,extended,05016373
+patch=1,EE,D01FFE82,extended,04016E65
+
+//check if l3 is held down
+patch=1,EE,D013CAFD,extended,01010002
+
+//store nop to angle instruct
+patch=1,EE,202206FC,extended,00000000
+
+//if not
+patch=1,EE,D013CAFD,extended,01010000
+
+//restore angle instruc
+patch=1,EE,202206FC,extended,24630040
+
+
+
+
+
+//if planet == Rilgar
+patch=1,EE,D0217190,extended,05016373
+patch=1,EE,D0217192,extended,04016E65
+
+//check if l3 is held down
+patch=1,EE,D013CAFD,extended,01010002
+
+//store nop to angle instruct
+patch=1,EE,20236E04,extended,00000000
+
+//if not
+patch=1,EE,D013CAFD,extended,01010000
+
+//restore angle instruc
+patch=1,EE,20236E04,extended,24630040
+
+
+
+
+//if planet == umbros
+patch=1,EE,D020FD20,extended,05016373
+patch=1,EE,D020FD22,extended,04016E65
+
+//check if l3 is held down
+patch=1,EE,D013CAFD,extended,01010002
+
+//store nop to angle instruct
+patch=1,EE,20230704,extended,00000000
+
+//if not
+patch=1,EE,D013CAFD,extended,01010000
+
+//restore angle instruc
+patch=1,EE,20230704,extended,24630040
+
+
+
+
+//if planet == batalia
+patch=1,EE,D01FA9C0,extended,05016373
+patch=1,EE,D01FA9C2,extended,04016E65
+
+//check if l3 is held down
+patch=1,EE,D013CAFD,extended,01010002
+
+//store nop to angle instruct
+patch=1,EE,2021AC14,extended,00000000
+
+//if not
+patch=1,EE,D013CAFD,extended,01010000
+
+//restore angle instruc
+patch=1,EE,2021AC14,extended,24630040
+
+
+
+
+//if planet == orxon
+patch=1,EE,D01DB800,extended,05016373
+patch=1,EE,D01DB802,extended,04016E65
+
+//check if l3 is held down
+patch=1,EE,D013CAFD,extended,01010002
+
+//store nop to angle instruct
+patch=1,EE,201FBF04,extended,00000000
+
+//if not
+patch=1,EE,D013CAFD,extended,01010000
+
+//restore angle instruc
+patch=1,EE,201FBF04,extended,24630040
+
+
+
+
+
+//if planet == gaspar
+patch=1,EE,D0207590,extended,05016373
+patch=1,EE,D0207592,extended,04016E65
+
+//check if l3 is held down
+patch=1,EE,D013CAFD,extended,01010002
+
+//store nop to angle instruct
+patch=1,EE,2022857C,extended,00000000
+
+//if not
+patch=1,EE,D013CAFD,extended,01010000
+
+//restore angle instruc
+patch=1,EE,2022857C,extended,24630040
+
+
+
+
+
+//if planet == pokitaru
+patch=1,EE,D0219BD0,extended,05016373
+patch=1,EE,D0219BD2,extended,04016E65
+
+//check if l3 is held down
+patch=1,EE,D013CAFD,extended,01010002
+
+//store nop to angle instruct
+patch=1,EE,202399F4,extended,00000000
+
+//if not
+patch=1,EE,D013CAFD,extended,01010000
+
+//restore angle instruc
+patch=1,EE,202399F4,extended,24630040
+
+
+
+//hoven here and it uses 2 checkes because randomness makes it so that teh first condition is true on Blackwater citys ship!
+patch=1,EE,D020AF60,extended,05016373
+patch=1,EE,D020AF62,extended,04016E65
+
+//check if l3 is held down
+patch=1,EE,D013CAFD,extended,01010002
+
+//store nop to angle instruct
+patch=1,EE,2022B084,extended,00000000
+
+//if not
+patch=1,EE,D013CAFD,extended,01010000
+
+//restore angle instruc
+patch=1,EE,2022B084,extended,24630040
+
+
+
+
+
+
+
+
+//if planet == gemlik based
+patch=1,EE,D01F34F0,extended,05016373
+patch=1,EE,D01F34F2,extended,04016E65
+
+//check if l3 is held down
+patch=1,EE,D013CAFD,extended,01010002
+
+//store nop to angle instruct
+patch=1,EE,20214384,extended,00000000
+
+//if not
+patch=1,EE,D013CAFD,extended,01010000
+
+//restore angle instruc
+patch=1,EE,20214384,extended,24630040
+
+
+
+
+
+
+//if planet == gorda city_oltanis
+patch=1,EE,D01FADD0,extended,05016373
+patch=1,EE,D01FADD2,extended,04016E65
+
+//check if l3 is held down
+patch=1,EE,D013CAFD,extended,01010002
+
+//store nop to angle instruct
+patch=1,EE,2021B78C,extended,00000000
+
+//if not
+patch=1,EE,D013CAFD,extended,01010000
+
+//restore angle instruc
+patch=1,EE,2021B78C,extended,24630040
+
+
+
+
+
+
+
+
+//if planet == quartu
+patch=1,EE,D01E1640,extended,05016373
+patch=1,EE,D01E1642,extended,04016E65
+
+//check if l3 is held down
+patch=1,EE,D013CAFD,extended,01010002
+
+//store nop to angle instruct
+patch=1,EE,2020171C,extended,00000000
+
+//if not
+patch=1,EE,D013CAFD,extended,01010000
+
+//restore angle instruc
+patch=1,EE,2020171C,extended,24630040
+
+
+
+
+
+
+//if planet == Kalebo
+patch=1,EE,D01E6D50,extended,05016373
+patch=1,EE,D01E6D52,extended,04016E65
+
+//check if l3 is held down
+patch=1,EE,D013CAFD,extended,01010002
+
+//store nop to angle instruct
+patch=1,EE,202068FC,extended,00000000
+
+//if not
+patch=1,EE,D013CAFD,extended,01010000
+
+//restore angle instruc
+patch=1,EE,202068FC,extended,24630040
+
+
+
+
+
+//if planet = drek fleet
+patch=1,EE,D01E5440,extended,05016373
+patch=1,EE,D01E5442,extended,04016E65
+
+//check if l3 is held down
+patch=1,EE,D013CAFD,extended,01010002
+
+//store nop to angle instruct
+patch=1,EE,202057F4,extended,00000000
+
+//if not
+patch=1,EE,D013CAFD,extended,01010000
+
+//restore angle instruc
+patch=1,EE,202057F4,extended,24630040
+
+
+
+
+
+//if planet == last veldin
+patch=1,EE,D01F11B0,extended,05016373
+patch=1,EE,D01F11B2,extended,04016E65
+
+//check if l3 is held down
+patch=1,EE,D013CAFD,extended,01010002
+
+//store nop to angle instruct
+patch=1,EE,20210D94,extended,00000000
+
+//if not
+patch=1,EE,D013CAFD,extended,01010000
+
+//restore angle instruc
+patch=1,EE,20210D94,extended,24630040
+
